@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <span v-once>{{ msg }}</span>
+    <button @click="msg='123'" >click</button>
+  </div>
+
+  <div id="app-2">
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+  </div>
+
+  <div id="app-3">
+    <div v-bind:id="dynamicId">Attribute</div>
+    <button v-bind:disabled="isButtonDisabled">Button</button>
+  </div>
+
+  <div id="app-4">
+    {{ number + 1 }}
+    {{ ok ? 'YES' : 'NO' }}
+    {{ message.split('').reverse().join('') }}
+
+    <div v-bind:id="'list-' + id">test</div>
+  </div>
+
+  <div id="app-5">
+    <a v-bind:href="url">baidu</a>
+
+    <a v-bind:[attr]="url"  v-on:[eventName]="doSomething" target="_blank">Baidu</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
