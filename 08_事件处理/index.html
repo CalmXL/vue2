@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="example-1">
+    <button v-on:click="counter += 1">Add 1</button>
+    <p>The button above has been clicked {{ counter }} times.</p>
+  </div>
+
+  <hr />
+
+  <div id="example-2">
+    <button v-on:click="greet">greet</button>
+  </div>
+
+  <hr />
+
+
+  <div id="example-3">
+    <button v-on:click="say('hi')">Say Hi</button>
+    <button v-on:click="say('what')">Say what</button>
+
+    <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
+  </div>
+
+
+  <div id="example-4">
+    <div @click="clickDiv">
+      <a @click.stop="doThis" href="javascript:;">修饰符</a>
+    </div>
+  </div>
+
+
+  <div id="example-5">
+    <input type="text" v-on:keyup.enter="submit" />
+
+    <input type="text" v-on:keyup.page-down="onPageDown" />
+  </div>
+
+
+  <div id="example-6">
+    <input type="text" v-on:keyup.13="submit" />
+  </div>
+
+
+  <div id="example-7">
+    <button v-on:click.command="onClick">A</button>
+
+    <button v-on:click.command.exact="onClick">A</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

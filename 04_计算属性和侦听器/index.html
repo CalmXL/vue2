@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <!--
+      这个地方，不再是简单的声明式的逻辑。你必须要看一段时间才能意识到，这里想要 翻转字符串。
+      对于任何复杂的逻辑，你都应当使用 计算属性。
+    -->
+    {{ message.split('').reverse().join('') }}
+  </div>
+
+  <div id="app-2">
+    <p>Original message: "{{ message }}"</p>
+    <!--  使用计算属性 -->
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+<!--    -->
+    <p>Reversed Message: {{ reversedMessageFun() }}</p>
+  </div>
+
+  <div id="app-3">
+    {{ fullName }}
+  </div>
+
+  <div id="app-4">
+    {{ fullName }}
+  </div>
+
+  <div id="app-5">
+    {{ fullName }} : {{ firstName }} - {{ lastName }}
+  </div>
+
+  <div id="app-6">
+    <p>
+      Ask a yes/no question:
+      <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

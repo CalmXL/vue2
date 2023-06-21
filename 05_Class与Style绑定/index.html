@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<!--<div id="app">-->
+<!--  <div-->
+<!--    class="static"-->
+<!--    v-bind:class="{ active: isActive, 'text-danger': hasError }"-->
+<!--  >123</div>-->
+
+
+<!--  <div v-bind:class="classObject">234</div>-->
+
+<!--</div>-->
+
+<!--<div id="app-2">-->
+<!--  <div v-bind:class="[activeClass, errorClass]">数组语法</div>-->
+
+<!--  <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>-->
+
+<!--  <div v-bind:class="[ { active: isActive }, errorClass ]"></div>-->
+<!--</div>-->
+
+  <div id="app-3">
+    <my-component class="a b"></my-component>
+  </div>
+
+
+  <div id="app-4">
+    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">123</div>
+
+    <div v-bind:style="styleObject">直接绑定一个样式对象</div>
+  </div>
+
+
+  <div id="app-5">
+    <div v-bind:style="[baseStyles, overridingStyles]">数组语法</div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

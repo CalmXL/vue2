@@ -106,4 +106,13 @@ new Vue({
  * 	同时，在构建由 Vue 管理所有模板的单页面应用程序（SPA - single page application ）时，v- 前缀也变得没有那么重要了。
  * 	因此， Vue 为 v-bind 和 v-on 这俩个最常用的指令，提供了特定简写：
  *
+ * v-bind 缩写:
+ *		< a v-bind:href="url">...</a>
+ *		<a :href="url">...</a>
+ *		<a :[key]="url">...</a>
+ *
+ * v-on缩写：
+ * 		<a v-on:click="doSomething">...</a>
+ * 		<a @click="doSomething">...</a>
+ *		<a @[event]="doSomething">...</a>
  */

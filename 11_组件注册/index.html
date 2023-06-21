@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <my-component-a></my-component-a>
+    <my-component-b></my-component-b>
+
+    <!-- 注意: 直接在 DOM (即非字符串的模板) 中使用时只有 kebab-case 有效的。  -->
+    <MyComponentB />
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
